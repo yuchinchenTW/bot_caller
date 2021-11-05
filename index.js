@@ -73,7 +73,7 @@ job.start()
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 } 
-let count =getRandomInt(25);
+let count =getRandomInt(26);
 let Tasks=async function(){
 while(count>-1){
   console.log(count);
@@ -279,9 +279,17 @@ await sleep(2000);
 await sleep(150000);
 count++;
 break;
+case 25:
+for(let i=0;i<3;i++){
+await msg.channel.send("幣值");
+await sleep(2000);
+}
+await sleep(120000);
+count++;
+break;
 default:
     //count++;
-    if(count>24) count=0;
+    if(count>25) count=0;
 
 await msg.channel.send("start");
 }
