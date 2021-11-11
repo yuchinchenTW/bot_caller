@@ -1,12 +1,27 @@
 {
-  "name": "botcaller",
-  "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
-    "@replit/database": "^2.0.1",
     "cron": "^1.8.2",
     "discord.js": "^12.5.3",
+    "express": "^4.17.1",
     "node-fetch": "^2.0.0"
-  }
+  },
+  "devDependencies": {
+    "node": "^16.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuchinchenTW/bot_caller.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuchinchenTW/bot_caller/issues"
+  },
+  "homepage": "https://github.com/yuchinchenTW/bot_caller#readme",
+  "description": ""
 }

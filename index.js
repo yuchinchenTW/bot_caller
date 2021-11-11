@@ -1,4 +1,5 @@
 "use strict";
+const keepAlive = require('./server');
 let {
   Client,
   Intents,
@@ -15,18 +16,14 @@ var cron = require("cron");
 /** 
 */
 
-const Database = require("@replit/database");
-const db = new Database();
-db.delete("key").then(() => {});
-db.set("key", "1").then(() => {});
-db.get("key").then(value => {console.log("-----------------------"+value)});
 
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
-
+keepAlive()
 client.login(token);
+//console.log("reach")
 client.once('ready', () => {
 console.log(`Logged in as ${client.user.tag}!`);
 console.log(client.channels.cache.get("345038542285832193").send("start"));
@@ -291,7 +288,7 @@ default:
     //count++;
     if(count>25) count=0;
 
-await msg.channel.send("start");
+//await msg.channel.send("start");
 }
 }
 }
